@@ -3,7 +3,9 @@ import {
   Box,
   Button,
   ButtonGroup,
+  IconButton,
   Modal,
+  Stack,
   TextField,
   Typography,
 } from "@mui/material";
@@ -13,6 +15,7 @@ import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const modalStyle = {
   position: "absolute",
@@ -259,6 +262,24 @@ function App() {
       </main>
       <footer>
         <p>The Contract Lounge 2026 &copy;</p>
+        <Stack direction="row" spacing={2} justifyContent="center">
+          <IconButton
+            component="a"
+            href="https://facebook.com"
+            target="_blank"
+            sx={{ color: "white" }}
+          >
+            <FaFacebook />
+          </IconButton>
+          <IconButton
+            component="a"
+            href="https://instagram.com"
+            target="_blank"
+            sx={{ color: "white" }}
+          >
+            <FaInstagram />
+          </IconButton>
+        </Stack>
       </footer>
     </div>
   );
