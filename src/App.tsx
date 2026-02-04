@@ -19,8 +19,8 @@ const modalStyle = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
+  width: 500,
+  bgcolor: "#0b2c5d",
   borderRadius: 2,
   boxShadow: 24,
   p: 4,
@@ -101,18 +101,24 @@ function App() {
                       date: "2026-02-24",
                       url: "https://www.eventbrite.com/e/the-contract-lounge-a-business-networking-happy-hour-tickets-1981498182404",
                       target: "_blank",
+                      backgroundColor: "#0b2c5d",
+                      textColor: "white",
                     },
                     {
                       title: "Supreme Lunch & Learn",
                       date: "2026-02-18",
                       url: "https://www.eventbrite.com/e/njhmfa-lunch-learn-real-estate-tickets-1981339321246",
                       target: "_blank",
+                      backgroundColor: "#0b2c5d",
+                      textColor: "white",
                     },
                     {
                       title: "Supreme Sponsored Event",
                       date: "2026-02-12",
                       url: "https://www.eventbrite.com/e/blackwood-nj-further-together-featuring-female-real-estate-pros-tickets-1980471075299",
                       target: "_blank",
+                      backgroundColor: "#0b2c5d",
+                      textColor: "white",
                     },
                   ]}
                   eventClick={(info) => {
@@ -132,12 +138,122 @@ function App() {
         {/* Modal 4 */}
         <Modal open={activeModal === 4} onClose={closeModal}>
           <Box sx={modalStyle}>
-            <Typography variant="h6">CONTACT</Typography>
+            <Typography variant="h6" color="primary">
+              CONTACT
+            </Typography>
             <TextField
-              id="outlined-basic"
-              label="Outlined"
+              id="name"
+              label="Name"
               variant="outlined"
+              margin="normal"
+              color="primary"
+              fullWidth
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  color: "white", // text color inside textarea
+                  "& fieldset": {
+                    borderColor: "white", // default border color
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white", // border on hover
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white", // border when focused
+                  },
+                },
+                "& .MuiInputLabel-root": {
+                  color: "white", // label color
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // label color when focused
+                },
+              }}
             />
+            <TextField
+              id="email"
+              label="Email"
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  color: "white", // text color inside textarea
+                  "& fieldset": {
+                    borderColor: "white", // default border color
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white", // border on hover
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white", // border when focused
+                  },
+                },
+                "& .MuiInputLabel-root": {
+                  color: "white", // label color
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // label color when focused
+                },
+              }}
+            />
+            <TextField
+              id="number"
+              label="Number"
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  color: "white", // text color inside textarea
+                  "& fieldset": {
+                    borderColor: "white", // default border color
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white", // border on hover
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white", // border when focused
+                  },
+                },
+                "& .MuiInputLabel-root": {
+                  color: "white", // label color
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // label color when focused
+                },
+              }}
+            />
+            <TextField
+              label="Message"
+              multiline
+              rows={4}
+              margin="normal"
+              fullWidth
+              placeholder="Let us build your brand"
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  color: "white", // text color inside textarea
+                  "& fieldset": {
+                    borderColor: "white", // default border color
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white", // border on hover
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white", // border when focused
+                  },
+                },
+                "& .MuiInputLabel-root": {
+                  color: "white", // label color
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // label color when focused
+                },
+              }}
+            />
+            <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+              Submit
+            </Button>
           </Box>
         </Modal>
       </main>
