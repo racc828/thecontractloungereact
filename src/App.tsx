@@ -63,6 +63,7 @@ function App() {
         <div className="top-logo">
           <img src={TopLogo} />
         </div>
+        <div className="line"></div>
         <div className="content">
           <img src={MainLogo} className="main-logo" />
           <p>
@@ -72,7 +73,7 @@ function App() {
           </p>
         </div>
         <ButtonGroup variant="outlined" aria-label="Basic button group">
-          <Button onClick={() => openModal(1)}> ABOUT US</Button>
+          <Button onClick={() => openModal(1)}> ABOUT</Button>
           <Button onClick={() => openModal(2)}>SPONSORS</Button>
           <Button onClick={() => openModal(3)}>EVENTS</Button>
           <Button onClick={() => openModal(4)}>CONTACT</Button>
@@ -84,7 +85,7 @@ function App() {
         <Modal open={activeModal === 1} onClose={closeModal}>
           <Box sx={modalStyle}>
             <Typography variant="h6" color="white">
-              ABOUT US
+              ABOUT
             </Typography>
             <Grid container spacing={2} color="white">
               <Grid size={{ xs: 12, md: 12 }}>
