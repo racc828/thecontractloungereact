@@ -88,44 +88,25 @@ function App() {
               ABOUT
             </Typography>
             <Grid container spacing={2} color="white">
-              <Grid size={{ xs: 12, md: 12 }}>
+              <Grid size={{ xs: 12, md: 6 }}>
+                <h4>Kris Cammarata</h4>
                 <p>
-                  I'm the co-founder of The Contract Lounge and a mortgage loan
-                  officer with Supreme Lending—but my path here has been
-                  anything but one-dimensional.
-                </p>
-                <p>
-                  For the past 14 years, aviation has been at the center of my
-                  professional life. I'm a helicopter pilot and continue to fly
-                  in the corporate space today. Flying has shaped how I approach
-                  business: staying calm under pressure, paying attention to
-                  detail, and building trust through consistency and
-                  professionalism. Those same principles carry directly into how
-                  I work with clients and partners across real estate and
-                  lending.
-                </p>
-                <p>
-                  Real estate has also been a constant thread for nearly 20
-                  years. While flying was my primary focus for many years, I
-                  remained involved in real estate as markets evolved. Today,
-                  I'm fully engaged on the lending side—helping buyers,
-                  homeowners, and investors structure smart mortgage
-                  solutions—while continuing to fly and maintain strong business
-                  relationships across industries.
-                </p>
-                <p>
-                  The Contract Lounge was born from that intersection: real
-                  estate, finance, aviation, and people. It's about creating
-                  meaningful connections, fostering real conversations, and
-                  building long-term relationships that extend well beyond a
-                  single transaction.
-                </p>
-                <p>
-                  Whether I'm in the cockpit or across the table, my focus is
-                  the same—clarity, trust, and relationships that last.
+                  Co-founder of The Contract Lounge and mortgage loan officer
+                  with Supreme Lending. A helicopter pilot for 14 years, I bring
+                  a calm, detail-driven approach to lending and real estate,
+                  focused on smart mortgage solutions and lasting relationships.
                 </p>
               </Grid>
-              <Grid size={{ xs: 12, md: 12 }}>Dans BIO</Grid>
+              <Grid size={{ xs: 12, md: 6 }}>
+                <h4>Dan Kent</h4>
+                <p>
+                  Co-founder of The Contract Lounge and South Jersey-based real
+                  estate professional and investor. With a background in
+                  high-pressure media environments, I bring a clear,
+                  relationship-driven approach to real estate, focused on trust,
+                  communication, and long-term client partnerships.
+                </p>
+              </Grid>
             </Grid>
           </Box>
         </Modal>
