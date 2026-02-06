@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   ButtonGroup,
+  Grid,
   IconButton,
   Modal,
   Stack,
@@ -15,18 +16,25 @@ import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const modalStyle = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 500,
   bgcolor: "#0b2c5d",
   borderRadius: 2,
   boxShadow: 24,
   p: 4,
+  width: {
+    xs: "90%", // phones
+    sm: 400, // tablets
+    md: 600, // small laptops
+    lg: 800, // desktops
+  },
+  maxHeight: "80vh",
+  overflowY: "auto",
 };
 
 const style = {
@@ -75,16 +83,61 @@ function App() {
         {/* Modal 1 */}
         <Modal open={activeModal === 1} onClose={closeModal}>
           <Box sx={modalStyle}>
-            <Typography variant="h6">ABOUT US</Typography>
-            <Typography sx={{ mt: 2 }}>Content for modal one.</Typography>
+            <Typography variant="h6" color="white">
+              ABOUT US
+            </Typography>
+            <Grid container spacing={2} color="white">
+              <Grid size={{ xs: 12, md: 12 }}>
+                <p>
+                  I'm the co-founder of The Contract Lounge and a mortgage loan
+                  officer with Supreme Lending—but my path here has been
+                  anything but one-dimensional.
+                </p>
+                <p>
+                  For the past 14 years, aviation has been at the center of my
+                  professional life. I'm a helicopter pilot and continue to fly
+                  in the corporate space today. Flying has shaped how I approach
+                  business: staying calm under pressure, paying attention to
+                  detail, and building trust through consistency and
+                  professionalism. Those same principles carry directly into how
+                  I work with clients and partners across real estate and
+                  lending.
+                </p>
+                <p>
+                  Real estate has also been a constant thread for nearly 20
+                  years. While flying was my primary focus for many years, I
+                  remained involved in real estate as markets evolved. Today,
+                  I'm fully engaged on the lending side—helping buyers,
+                  homeowners, and investors structure smart mortgage
+                  solutions—while continuing to fly and maintain strong business
+                  relationships across industries.
+                </p>
+                <p>
+                  The Contract Lounge was born from that intersection: real
+                  estate, finance, aviation, and people. It's about creating
+                  meaningful connections, fostering real conversations, and
+                  building long-term relationships that extend well beyond a
+                  single transaction.
+                </p>
+                <p>
+                  Whether I'm in the cockpit or across the table, my focus is
+                  the same—clarity, trust, and relationships that last.
+                </p>
+              </Grid>
+              <Grid size={{ xs: 12, md: 12 }}>Dans BIO</Grid>
+            </Grid>
           </Box>
         </Modal>
 
         {/* Modal 2 */}
         <Modal open={activeModal === 2} onClose={closeModal}>
           <Box sx={modalStyle}>
-            <Typography variant="h6">SPONSORS</Typography>
-            <Typography sx={{ mt: 2 }}>Content for modal two.</Typography>
+            <Typography variant="h6" color="white">
+              SPONSORS
+            </Typography>
+            <Typography sx={{ mt: 2 }} color="white">
+              Content for modal two.
+            </Typography>
           </Box>
         </Modal>
 
@@ -265,7 +318,7 @@ function App() {
         <Stack direction="row" spacing={2} justifyContent="center">
           <IconButton
             component="a"
-            href="https://facebook.com"
+            href="https://www.facebook.com/share/g/17x1XJQ7Bp/?mibextid=wwXIfr"
             target="_blank"
             sx={{ color: "white" }}
           >
@@ -273,7 +326,7 @@ function App() {
           </IconButton>
           <IconButton
             component="a"
-            href="https://instagram.com"
+            href="https://www.instagram.com/thecontractlounge.events?igsh=MWphbnppbzl2cWpxaw%3D%3D"
             target="_blank"
             sx={{ color: "white" }}
           >
