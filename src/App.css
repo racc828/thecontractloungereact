@@ -12,6 +12,9 @@
   background: #0b2c5d;
   color: #ffffff;
 }
+.headshot {
+  max-width: 100%;
+}
 
 .main-logo {
   max-width: 100%;

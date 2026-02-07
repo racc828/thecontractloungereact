@@ -12,6 +12,8 @@ import {
 } from "@mui/material";
 import MainLogo from "./assets/main-logo.png";
 import TopLogo from "./assets/white-logo.png";
+import KrisC from "./assets/kriscammarata.png";
+import DanK from "./assets/dankent.png";
 import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -68,8 +70,8 @@ function App() {
           <img src={MainLogo} className="main-logo" />
           <p>
             The contract lounge is a modern referral community for local
-            business pros - built around curated events, smart introductions,
-            and sponsor partners
+            business pros - built around monthly curated events, smart
+            introductions, and sponsor partners
           </p>
         </div>
         <ButtonGroup variant="outlined" aria-label="Basic button group">
@@ -89,6 +91,7 @@ function App() {
             </Typography>
             <Grid container spacing={2} color="white">
               <Grid size={{ xs: 12, md: 6 }}>
+                <img src={KrisC} alt="Kris Cammarata" className="headshot" />
                 <h4>Kris Cammarata</h4>
                 <p>
                   Co-founder of The Contract Lounge and mortgage loan officer
@@ -98,6 +101,7 @@ function App() {
                 </p>
               </Grid>
               <Grid size={{ xs: 12, md: 6 }}>
+                <img src={DanK} alt="Dan Kent" className="headshot" />
                 <h4>Dan Kent</h4>
                 <p>
                   Co-founder of The Contract Lounge and South Jersey-based real
