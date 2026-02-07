@@ -13,7 +13,7 @@ import {
 import MainLogo from "./assets/main-logo.png";
 import TopLogo from "./assets/white-logo.png";
 import KrisC from "./assets/kriscammarata.png";
-import DanK from "./assets/dankent.png";
+import DanK from "./assets/dankent2.png";
 import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -44,7 +44,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "80vw",
+  width: "90vw",
   height: "80vh", // 👈 critical
   display: "flex",
   flexDirection: "column",
