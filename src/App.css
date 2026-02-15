@@ -89,3 +89,7 @@ header {
 footer p {
   font-size: 10px;
 }
+
+.buttongroup-button {
+  padding: 20px;
+}

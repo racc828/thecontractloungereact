@@ -9,6 +9,8 @@ import {
   Stack,
   TextField,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import MainLogo from "./assets/main-logo.png";
 import TopLogo from "./assets/white-logo.png";
@@ -58,6 +60,8 @@ function App() {
 
   const openModal = (id: number | null) => setActiveModal(id);
   const closeModal = () => setActiveModal(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div className="wrapper">
@@ -74,14 +78,26 @@ function App() {
             introductions, and sponsor partners
           </p>
         </div>
-        <ButtonGroup variant="outlined" aria-label="Basic button group">
-          <Button onClick={() => openModal(1)}> ABOUT</Button>
-          <Button onClick={() => openModal(2)}>SPONSORS</Button>
-          <Button onClick={() => openModal(3)}>EVENTS</Button>
-          <Button onClick={() => openModal(4)}>CONTACT</Button>
+        <ButtonGroup
+          orientation={isMobile ? "vertical" : "horizontal"}
+          variant="outlined"
+          aria-label="Basic button group"
+          sx={{ mb: 3 }}
+        >
+          <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(1)}>
+            ABOUT
+          </Button>
+          <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(2)}>
+            SPONSORS
+          </Button>
+          <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(3)}>
+            EVENTS
+          </Button>
+          <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(4)}>
+            CONTACT
+          </Button>
         </ButtonGroup>
       </header>
-
       <main>
         {/* Modal 1 */}
         <Modal open={activeModal === 1} onClose={closeModal}>
