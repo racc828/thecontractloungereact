@@ -37,6 +37,26 @@ const modalStyle = {
   overflowY: "auto",
 };
 
+const modalStyleCalendar = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  bgcolor: "#0b2c5d",
+  borderRadius: 2,
+  boxShadow: 24,
+  px: 1,
+  py: 5,
+  width: {
+    xs: "100%", // phones
+    sm: 400, // tablets
+    md: 600, // small laptops
+    lg: 800, // desktops
+  },
+  maxHeight: "80vh",
+  overflowY: "auto",
+};
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -142,7 +162,7 @@ function App() {
         {/* Modal 3 */}
         <Modal open={activeModal === 3} onClose={closeModal}>
           <div>
-            <Box sx={style}>
+            <Box sx={modalStyleCalendar} color="primary">
               <IconButton
                 onClick={closeModal}
                 color="primary"
@@ -155,7 +175,6 @@ function App() {
                 <FaTimes size={18} />
               </IconButton>
               <Box sx={{ flex: 1, minHeight: 0 }}>
-                EVENT
                 <CalendarWrapper />
               </Box>
             </Box>

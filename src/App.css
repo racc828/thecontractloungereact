@@ -93,3 +93,11 @@ footer p {
 .buttongroup-button {
   padding: 20px;
 }
+
+.fc-toolbar-title {
+  color: white !important;
+}
+
+.fc-daygrid-day-number {
+  color: white !important;
+}
