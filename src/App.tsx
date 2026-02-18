@@ -20,7 +20,7 @@ import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTimes } from "react-icons/fa";
 
 const modalStyle = {
   position: "absolute",
@@ -102,6 +102,17 @@ function App() {
         {/* Modal 1 */}
         <Modal open={activeModal === 1} onClose={closeModal}>
           <Box sx={modalStyle}>
+            <IconButton
+              onClick={closeModal}
+              color="primary"
+              sx={{
+                position: "absolute",
+                right: 8,
+                top: 8,
+              }}
+            >
+              <FaTimes size={18} />
+            </IconButton>
             <Typography variant="h6" color="white">
               ABOUT
             </Typography>
@@ -134,6 +145,17 @@ function App() {
         {/* Modal 2 */}
         <Modal open={activeModal === 2} onClose={closeModal}>
           <Box sx={modalStyle}>
+            <IconButton
+              onClick={closeModal}
+              color="primary"
+              sx={{
+                position: "absolute",
+                right: 8,
+                top: 8,
+              }}
+            >
+              <FaTimes size={18} />
+            </IconButton>
             <Typography variant="h6" color="white">
               SPONSORS
             </Typography>
@@ -147,6 +169,17 @@ function App() {
         <Modal open={activeModal === 3} onClose={closeModal}>
           <div>
             <Box sx={style}>
+              <IconButton
+                onClick={closeModal}
+                color="primary"
+                sx={{
+                  position: "absolute",
+                  right: 8,
+                  top: 8,
+                }}
+              >
+                <FaTimes size={18} />
+              </IconButton>
               <Box sx={{ flex: 1, minHeight: 0 }}>
                 EVENT
                 <FullCalendar
@@ -196,6 +229,17 @@ function App() {
         {/* Modal 4 */}
         <Modal open={activeModal === 4} onClose={closeModal}>
           <Box sx={modalStyle}>
+            <IconButton
+              onClick={closeModal}
+              color="primary"
+              sx={{
+                position: "absolute",
+                right: 8,
+                top: 8,
+              }}
+            >
+              <FaTimes size={18} />
+            </IconButton>
             <Typography variant="h6" color="primary">
               CONTACT
             </Typography>
