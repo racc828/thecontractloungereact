@@ -327,10 +327,12 @@ function App() {
             />
             <TextField
               label="Message"
-              multiline
-              rows={4}
+              id="message"
+              variant="outlined"
               margin="normal"
               fullWidth
+              multiline
+              rows={4}
               placeholder="Let us build your brand"
               sx={{
                 "& .MuiOutlinedInput-root": {
