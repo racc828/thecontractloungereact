@@ -57,20 +57,6 @@ const modalStyleCalendar = {
   overflowY: "auto",
 };
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "90vw",
-  height: "80vh", // 👈 critical
-  display: "flex",
-  flexDirection: "column",
-  bgcolor: "background.paper",
-  boxShadow: 24,
-  p: 2,
-};
-
 function App() {
   const [activeModal, setActiveModal] = React.useState<number | null>(null);
 
