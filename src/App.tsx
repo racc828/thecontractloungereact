@@ -46,7 +46,7 @@ const modalStyleCalendar = {
   borderRadius: 2,
   boxShadow: 24,
   px: 1,
-  py: 5,
+  py: 6,
   width: {
     xs: "100%", // phones
     sm: 400, // tablets
