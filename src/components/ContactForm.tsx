@@ -9,9 +9,11 @@ const ContactForm = () => {
     message: false,
   });
 
-  const onFocus = (k) => () => setShrink((s) => ({ ...s, [k]: true }));
-  const onBlur = (k) => (e) =>
-    setShrink((s) => ({ ...s, [k]: Boolean(e.target.value) }));
+  const onFocus = (k: keyof typeof shrink) => () =>
+    setShrink((s) => ({ ...s, [k]: true }));
+  const onBlur =
+    (k: keyof typeof shrink) => (e: React.FocusEvent<HTMLInputElement>) =>
+      setShrink((s) => ({ ...s, [k]: Boolean(e.target.value) }));
   return (
     <>
       <TextField
