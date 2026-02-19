@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import KrisC from "../assets/kriscammarata.png";
-import DanK from "../assets/dankent2.png";
+import DanK from "../assets/dankent.png";
 
 const About = () => {
   return (
