@@ -1,142 +1,136 @@
 import { Button, TextField } from "@mui/material";
-import React from "react";
 
 const ContactForm = () => {
-  const [shrink, setShrink] = React.useState({
-    name: false,
-    email: false,
-    number: false,
-    message: false,
-  });
-
-  const onFocus = (k: keyof typeof shrink) => () =>
-    setShrink((s) => ({ ...s, [k]: true }));
-  const onBlur =
-    (k: keyof typeof shrink) => (e: React.FocusEvent<HTMLInputElement>) =>
-      setShrink((s) => ({ ...s, [k]: Boolean(e.target.value) }));
   return (
     <>
       <TextField
         id="name"
         label="Name"
-        variant="outlined"
+        variant="filled"
         margin="normal"
         color="primary"
-        onFocus={onFocus("name")}
-        onBlur={onBlur("name")}
-        InputLabelProps={{ shrink: shrink.name }}
         fullWidth
         sx={{
-          "& .MuiOutlinedInput-root": {
-            color: "white", // text color inside textarea
-            "& fieldset": {
-              borderColor: "white", // default border color
+          "& .MuiFilledInput-root": {
+            color: "#ffffff",
+            // default underline
+            "&:before": {
+              borderBottomColor: "#ccc",
             },
-            "&:hover fieldset": {
-              borderColor: "white", // border on hover
+
+            // hover underline
+            "&:hover:not(.Mui-disabled, .Mui-error):before": {
+              borderBottomColor: "#fff",
             },
-            "&.Mui-focused fieldset": {
-              borderColor: "white", // border when focused
+
+            // focused underline (THIS is when you click)
+            "&:after": {
+              borderBottomColor: "#6DB04B", // your color
             },
+          },
+          "& .MuiFilledInput-input": {
+            color: "#fff",
           },
           "& .MuiInputLabel-root": {
-            color: "white", // label color
-          },
-          "& .MuiInputLabel-root.Mui-focused": {
-            color: "white", // label color when focused
+            color: "#fff",
           },
         }}
       />
       <TextField
         id="email"
         label="Email"
-        variant="outlined"
+        variant="filled"
         margin="normal"
-        onFocus={onFocus("email")}
-        onBlur={onBlur("email")}
-        InputLabelProps={{ shrink: shrink.email }}
         fullWidth
         sx={{
-          "& .MuiOutlinedInput-root": {
-            color: "white", // text color inside textarea
-            "& fieldset": {
-              borderColor: "white", // default border color
+          "& .MuiFilledInput-root": {
+            color: "#ffffff",
+            // default underline
+            "&:before": {
+              borderBottomColor: "#ccc",
             },
-            "&:hover fieldset": {
-              borderColor: "white", // border on hover
+
+            // hover underline
+            "&:hover:not(.Mui-disabled, .Mui-error):before": {
+              borderBottomColor: "#fff",
             },
-            "&.Mui-focused fieldset": {
-              borderColor: "white", // border when focused
+
+            // focused underline (THIS is when you click)
+            "&:after": {
+              borderBottomColor: "#6DB04B", // your color
             },
+          },
+          "& .MuiFilledInput-input": {
+            color: "#fff",
           },
           "& .MuiInputLabel-root": {
-            color: "white", // label color
-          },
-          "& .MuiInputLabel-root.Mui-focused": {
-            color: "white", // label color when focused
+            color: "#fff",
           },
         }}
       />
       <TextField
         id="number"
         label="Number"
-        variant="outlined"
+        variant="filled"
         margin="normal"
-        onFocus={onFocus("number")}
-        onBlur={onBlur("number")}
-        InputLabelProps={{ shrink: shrink.number }}
         fullWidth
         sx={{
-          "& .MuiOutlinedInput-root": {
-            color: "white", // text color inside textarea
-            "& fieldset": {
-              borderColor: "white", // default border color
+          "& .MuiFilledInput-root": {
+            color: "#ffffff",
+            // default underline
+            "&:before": {
+              borderBottomColor: "#ccc",
             },
-            "&:hover fieldset": {
-              borderColor: "white", // border on hover
+
+            // hover underline
+            "&:hover:not(.Mui-disabled, .Mui-error):before": {
+              borderBottomColor: "#fff",
             },
-            "&.Mui-focused fieldset": {
-              borderColor: "white", // border when focused
+
+            // focused underline (THIS is when you click)
+            "&:after": {
+              borderBottomColor: "#6DB04B", // your color
             },
+          },
+          "& .MuiFilledInput-input": {
+            color: "#fff",
           },
           "& .MuiInputLabel-root": {
-            color: "white", // label color
-          },
-          "& .MuiInputLabel-root.Mui-focused": {
-            color: "white", // label color when focused
+            color: "#fff",
           },
         }}
       />
       <TextField
         label="Message"
         id="message"
-        variant="outlined"
+        variant="filled"
         margin="normal"
         fullWidth
-        onFocus={onFocus("message")}
-        onBlur={onBlur("message")}
-        InputLabelProps={{ shrink: shrink.message }}
         multiline
         rows={4}
-        placeholder="Let us build your brand"
         sx={{
-          "& .MuiOutlinedInput-root": {
-            color: "white", // text color inside textarea
-            "& fieldset": {
-              borderColor: "white", // default border color
+          "& .MuiFilledInput-root": {
+            color: "#ffffff",
+            // default underline
+            "&:before": {
+              borderBottomColor: "#ccc",
             },
-            "&:hover fieldset": {
-              borderColor: "white", // border on hover
+
+            // hover underline
+            "&:hover:not(.Mui-disabled, .Mui-error):before": {
+              borderBottomColor: "#fff",
             },
-            "&.Mui-focused fieldset": {
-              borderColor: "white", // border when focused
+
+            // focused underline (THIS is when you click)
+            "&:after": {
+              borderBottomColor: "#6DB04B", // your color
             },
+          },
+          "& .MuiFilledInput-input": {
+            color: "#fff",
           },
           "& .MuiInputLabel-root": {
-            color: "white", // label color
-          },
-          "& .MuiInputLabel-root.Mui-focused": {
-            color: "white", // label color when focused
+            color: "#fff",
           },
         }}
       />
