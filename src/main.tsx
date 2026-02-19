@@ -26,9 +26,9 @@ const theme = createTheme({
             color: "#6DB04B",
           },
           "&:focus": {
-            borderColor: "#6DB04B",
-            color: "#6DB04B",
-            outline: "#6DB04B",
+            borderColor: "#ffffff",
+            color: "#ffffff",
+            outline: "#ffffff",
           },
         }),
       },
