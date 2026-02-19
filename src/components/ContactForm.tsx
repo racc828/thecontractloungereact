@@ -1,6 +1,17 @@
 import { Button, TextField } from "@mui/material";
+import React from "react";
 
 const ContactForm = () => {
+  const [shrink, setShrink] = React.useState({
+    name: false,
+    email: false,
+    number: false,
+    message: false,
+  });
+
+  const onFocus = (k) => () => setShrink((s) => ({ ...s, [k]: true }));
+  const onBlur = (k) => (e) =>
+    setShrink((s) => ({ ...s, [k]: Boolean(e.target.value) }));
   return (
     <>
       <TextField
@@ -9,6 +20,9 @@ const ContactForm = () => {
         variant="outlined"
         margin="normal"
         color="primary"
+        onFocus={onFocus("name")}
+        onBlur={onBlur("name")}
+        InputLabelProps={{ shrink: shrink.name }}
         fullWidth
         sx={{
           "& .MuiOutlinedInput-root": {
@@ -36,6 +50,9 @@ const ContactForm = () => {
         label="Email"
         variant="outlined"
         margin="normal"
+        onFocus={onFocus("email")}
+        onBlur={onBlur("email")}
+        InputLabelProps={{ shrink: shrink.email }}
         fullWidth
         sx={{
           "& .MuiOutlinedInput-root": {
@@ -63,6 +80,9 @@ const ContactForm = () => {
         label="Number"
         variant="outlined"
         margin="normal"
+        onFocus={onFocus("number")}
+        onBlur={onBlur("number")}
+        InputLabelProps={{ shrink: shrink.number }}
         fullWidth
         sx={{
           "& .MuiOutlinedInput-root": {
@@ -91,6 +111,9 @@ const ContactForm = () => {
         variant="outlined"
         margin="normal"
         fullWidth
+        onFocus={onFocus("message")}
+        onBlur={onBlur("message")}
+        InputLabelProps={{ shrink: shrink.message }}
         multiline
         rows={4}
         placeholder="Let us build your brand"
