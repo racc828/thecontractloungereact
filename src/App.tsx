@@ -138,7 +138,7 @@ function App() {
               <FaTimes size={18} />
             </IconButton>
             <Typography variant="h6" color="white">
-              SPONSORS
+              FEBRUARY SPONSORS
             </Typography>
             <Sponsors />
           </Box>

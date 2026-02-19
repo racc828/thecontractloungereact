@@ -4,6 +4,7 @@ import KeysWithSupreme from "../assets/keyswithsupreme.png";
 import Midas from "../assets/midas.png";
 import Real from "../assets/real.png";
 import Nita from "../assets/nita.png";
+import RacquelBuilds from "../assets/racquelbuilds.png";
 
 const Sponsors = () => {
   return (
@@ -44,6 +45,13 @@ const Sponsors = () => {
           >
             <img className="sponsor-img" src={Nita} alt="Nita" />
           </a>
+        </Grid>
+        <Grid size={{ xs: 6, md: 4 }}>
+          <img
+            className="sponsor-img"
+            src={RacquelBuilds}
+            alt="Racquel Builds"
+          />
         </Grid>
       </Grid>
     </>
