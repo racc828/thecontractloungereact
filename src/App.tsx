@@ -116,7 +116,7 @@ function App() {
             >
               <FaTimes size={18} />
             </IconButton>
-            <Typography variant="h6" color="white">
+            <Typography variant="h6" color="white" sx={{ mb: 2 }}>
               ABOUT
             </Typography>
             <About />
@@ -137,7 +137,7 @@ function App() {
             >
               <FaTimes size={18} />
             </IconButton>
-            <Typography variant="h6" color="white">
+            <Typography sx={{ mb: 2 }} variant="h6" color="white">
               FEBRUARY SPONSORS
             </Typography>
             <Sponsors />
@@ -180,7 +180,7 @@ function App() {
             >
               <FaTimes size={18} />
             </IconButton>
-            <Typography variant="h6" color="primary">
+            <Typography variant="h6" color="primary" sx={{ mb: 2 }}>
               CONTACT
             </Typography>
             <ContactForm />
