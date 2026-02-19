@@ -10,13 +10,14 @@ import {
   useTheme,
 } from "@mui/material";
 import MainLogo from "./assets/main-logo.png";
-import TopLogo from "./assets/white-logo.png";
+import TopLogo from "./assets/blue-logo.png";
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import CalendarWrapper from "./components/CalendarWrapper";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Sponsors from "./components/Sponsors";
 
 const modalStyle = {
   position: "absolute",
@@ -71,7 +72,6 @@ function App() {
         <div className="top-logo">
           <img src={TopLogo} />
         </div>
-        <div className="line"></div>
         <div className="content">
           <img src={MainLogo} className="main-logo" />
           <p>
@@ -80,6 +80,7 @@ function App() {
             introductions, and sponsor partners
           </p>
         </div>
+
         <ButtonGroup
           orientation={isMobile ? "vertical" : "horizontal"}
           variant="outlined"
@@ -139,9 +140,7 @@ function App() {
             <Typography variant="h6" color="white">
               SPONSORS
             </Typography>
-            <Typography sx={{ mt: 2 }} color="white">
-              Content for modal two.
-            </Typography>
+            <Sponsors />
           </Box>
         </Modal>
 

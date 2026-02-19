@@ -10,7 +10,12 @@ const Footer = () => {
           component="a"
           href="https://www.facebook.com/share/g/17x1XJQ7Bp/?mibextid=wwXIfr"
           target="_blank"
-          sx={{ color: "white" }}
+          sx={{
+            color: "white",
+            "&:hover": {
+              color: "#6DB04B",
+            },
+          }}
         >
           <FaFacebook />
         </IconButton>
@@ -18,7 +23,12 @@ const Footer = () => {
           component="a"
           href="https://www.instagram.com/thecontractlounge.events?igsh=MWphbnppbzl2cWpxaw%3D%3D"
           target="_blank"
-          sx={{ color: "white" }}
+          sx={{
+            color: "white",
+            "&:hover": {
+              color: "#6DB04B",
+            },
+          }}
         >
           <FaInstagram />
         </IconButton>

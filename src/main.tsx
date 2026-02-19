@@ -11,6 +11,29 @@ const theme = createTheme({
     primary: { main: "#ffffff" },
     secondary: { main: "#0b2c5d" },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        outlinedPrimary: ({ theme }) => ({
+          borderColor: theme.palette.primary.main,
+
+          "&:hover": {
+            borderColor: "#6DB04B",
+            color: "#6DB04B",
+            backgroundColor: "transparent", // optional (removes gray hover fill)
+          },
+          "&.Mui-focusVisible": {
+            color: "#6DB04B",
+          },
+          "&:focus": {
+            borderColor: "#6DB04B",
+            color: "#6DB04B",
+            outline: "#6DB04B",
+          },
+        }),
+      },
+    },
+  },
 });
 
 createRoot(document.getElementById("root")!).render(

@@ -27,6 +27,7 @@
   line-height: 5.5rem;
   border: 1px solid #ffffff;
   border-radius: 100%;
+  background: white;
 }
 
 .top-logo img {
@@ -39,7 +40,7 @@
   border-style: solid;
   border-color: #ffffff;
   border-width: 1px 0;
-  margin-bottom: 3.5rem;
+  margin: 2rem 0;
   width: 80%;
   @media screen and (max-width: 599px) {
     width: 95%;
@@ -100,4 +101,8 @@ footer p {
 
 .fc-daygrid-day-number {
   color: white !important;
+}
+
+.sponsor-img {
+  max-width: 100%;
 }
