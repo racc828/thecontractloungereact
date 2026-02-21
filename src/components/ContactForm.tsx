@@ -1,9 +1,38 @@
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 
 const ContactForm = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target as HTMLFormElement);
+
+    const response = await fetch("https://formspree.io/f/mdalwdyl", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setSubmitted(true);
+    }
+  };
+
+  if (submitted) {
+    return (
+      <Typography color="white" variant="h5">
+        Thank you! Your message has been sent.
+      </Typography>
+    );
+  }
+
   return (
     <>
-      <form action="https://formspree.io/f/mdalwdyl" method="POST">
+      <form onSubmit={handleSubmit}>
         <TextField
           id="name"
           label="Name"
@@ -12,6 +41,8 @@ const ContactForm = () => {
           color="primary"
           name="name"
           fullWidth
+          required
+          type="text"
           sx={{
             "& .MuiFilledInput-root": {
               color: "#ffffff",
@@ -45,6 +76,8 @@ const ContactForm = () => {
           margin="normal"
           fullWidth
           name="email"
+          required
+          type="email"
           sx={{
             "& .MuiFilledInput-root": {
               color: "#ffffff",
@@ -78,6 +111,20 @@ const ContactForm = () => {
           margin="normal"
           fullWidth
           name="number"
+          required
+          type="tel"
+          slotProps={{
+            htmlInput: {
+              pattern: "[0-9]{10}",
+              inputMode: "numeric",
+            },
+            formHelperText: {
+              sx: {
+                color: "#fff",
+              },
+            },
+          }}
+          helperText="Enter 10 digit phone number"
           sx={{
             "& .MuiFilledInput-root": {
               color: "#ffffff",
@@ -113,6 +160,8 @@ const ContactForm = () => {
           name="message"
           multiline
           rows={4}
+          required
+          type="text"
           sx={{
             "& .MuiFilledInput-root": {
               color: "#ffffff",
