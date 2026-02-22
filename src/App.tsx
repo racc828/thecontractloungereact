@@ -47,7 +47,7 @@ const modalStyleCalendar = {
   borderRadius: 2,
   boxShadow: 24,
   px: 1,
-  py: 6,
+  py: 2,
   width: {
     xs: "100%", // phones
     sm: 400, // tablets
@@ -137,8 +137,11 @@ function App() {
             >
               <FaTimes size={18} />
             </IconButton>
-            <Typography sx={{ mb: 2 }} variant="h6" color="white">
+            <Typography sx={{ mb: 1 }} variant="h6" color="white">
               FEBRUARY SPONSORS
+            </Typography>
+            <Typography sx={{ mb: 2 }} variant="body1" color="#6DB04B">
+              Click logo for sponsors website!
             </Typography>
             <Sponsors />
           </Box>
@@ -159,6 +162,9 @@ function App() {
               >
                 <FaTimes size={18} />
               </IconButton>
+              <Typography sx={{ mb: 2 }} variant="body1" color="#6DB04B">
+                Click event for more information!
+              </Typography>
               <Box sx={{ flex: 1, minHeight: 0 }}>
                 <CalendarWrapper />
               </Box>
@@ -180,7 +186,7 @@ function App() {
             >
               <FaTimes size={18} />
             </IconButton>
-            <Typography variant="h6" color="primary" sx={{ mb: 2 }}>
+            <Typography variant="h6" color="primary">
               CONTACT
             </Typography>
             <ContactForm />
