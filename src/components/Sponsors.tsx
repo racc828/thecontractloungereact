@@ -47,11 +47,13 @@ const Sponsors = () => {
           </a>
         </Grid>
         <Grid size={{ xs: 6, md: 4 }}>
-          <img
-            className="sponsor-img"
-            src={RacquelBuilds}
-            alt="Racquel Builds"
-          />
+          <a href="https://racquelbuilds.com/" target="_blank">
+            <img
+              className="sponsor-img"
+              src={RacquelBuilds}
+              alt="Racquel Builds"
+            />
+          </a>
         </Grid>
       </Grid>
     </>
