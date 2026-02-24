@@ -106,3 +106,11 @@ footer p {
 .sponsor-img {
   max-width: 100%;
 }
+
+.footer-text {
+  text-align: center;
+}
+
+.footer-text a {
+  color: #6db04b;
+}

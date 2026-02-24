@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <p>The Contract Lounge 2026 &copy;</p>
+      <p className="footer-text">The Contract Lounge 2026 &copy;</p>
       <Stack direction="row" spacing={2} justifyContent="center">
         <IconButton
           component="a"
@@ -33,6 +33,12 @@ const Footer = () => {
           <FaInstagram />
         </IconButton>
       </Stack>
+      <p className="footer-text">
+        Website designed and developed by &nbsp;
+        <a href="https://racquelbuilds.com/" target="_blank">
+          Racquel Builds
+        </a>
+      </p>
     </>
   );
 };
