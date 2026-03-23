@@ -18,6 +18,7 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Sponsors from "./components/Sponsors";
+import AlertBanner from "./components/AlertBanner";
 
 const modalStyle = {
   position: "absolute",
@@ -67,90 +68,46 @@ function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <div className="wrapper">
-      <header>
-        <div className="top-logo">
-          <img src={TopLogo} />
-        </div>
-        <div className="content">
-          <img src={MainLogo} className="main-logo" />
-          <p>
-            The contract lounge is a modern referral community for local
-            business pros - built around monthly curated events, smart
-            introductions, and sponsor partners
-          </p>
-        </div>
+    <>
+      <AlertBanner />
+      <div className="wrapper">
+        <header>
+          <div className="top-logo">
+            <img src={TopLogo} />
+          </div>
+          <div className="content">
+            <img src={MainLogo} className="main-logo" />
+            <p>
+              The contract lounge is a modern referral community for local
+              business pros - built around monthly curated events, smart
+              introductions, and sponsor partners
+            </p>
+          </div>
 
-        <ButtonGroup
-          orientation={isMobile ? "vertical" : "horizontal"}
-          variant="outlined"
-          aria-label="Basic button group"
-          sx={{ mb: 3 }}
-        >
-          <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(1)}>
-            ABOUT
-          </Button>
-          <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(2)}>
-            SPONSORS
-          </Button>
-          <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(3)}>
-            EVENTS
-          </Button>
-          <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(4)}>
-            CONTACT
-          </Button>
-        </ButtonGroup>
-      </header>
-      <main>
-        {/* Modal 1 */}
-        <Modal open={activeModal === 1} onClose={closeModal}>
-          <Box sx={modalStyle}>
-            <IconButton
-              onClick={closeModal}
-              color="primary"
-              sx={{
-                position: "absolute",
-                right: 8,
-                top: 8,
-              }}
-            >
-              <FaTimes size={18} />
-            </IconButton>
-            <Typography variant="h6" color="white" sx={{ mb: 2 }}>
+          <ButtonGroup
+            orientation={isMobile ? "vertical" : "horizontal"}
+            variant="outlined"
+            aria-label="Basic button group"
+            sx={{ mb: 3 }}
+          >
+            <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(1)}>
               ABOUT
-            </Typography>
-            <About />
-          </Box>
-        </Modal>
-
-        {/* Modal 2 */}
-        <Modal open={activeModal === 2} onClose={closeModal}>
-          <Box sx={modalStyle}>
-            <IconButton
-              onClick={closeModal}
-              color="primary"
-              sx={{
-                position: "absolute",
-                right: 8,
-                top: 8,
-              }}
-            >
-              <FaTimes size={18} />
-            </IconButton>
-            <Typography sx={{ mb: 1 }} variant="h6" color="white">
-              FEBRUARY SPONSORS
-            </Typography>
-            <Typography sx={{ mb: 2 }} variant="body1" color="#6DB04B">
-              Click logo for sponsors website!
-            </Typography>
-            <Sponsors />
-          </Box>
-        </Modal>
-
-        {/* Modal 3 */}
-        <Modal open={activeModal === 3} onClose={closeModal}>
-          <div>
-            <Box sx={modalStyleCalendar} color="primary">
+            </Button>
+            <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(2)}>
+              SPONSORS
+            </Button>
+            <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(3)}>
+              EVENTS
+            </Button>
+            <Button sx={{ px: 6, py: 2 }} onClick={() => openModal(4)}>
+              CONTACT
+            </Button>
+          </ButtonGroup>
+        </header>
+        <main>
+          {/* Modal 1 */}
+          <Modal open={activeModal === 1} onClose={closeModal}>
+            <Box sx={modalStyle}>
               <IconButton
                 onClick={closeModal}
                 color="primary"
@@ -162,41 +119,88 @@ function App() {
               >
                 <FaTimes size={18} />
               </IconButton>
-              <Typography sx={{ mb: 2 }} variant="body1" color="#6DB04B">
-                Click event for more information!
+              <Typography variant="h6" color="white" sx={{ mb: 2 }}>
+                ABOUT
               </Typography>
-              <Box sx={{ flex: 1, minHeight: 0 }}>
-                <CalendarWrapper />
-              </Box>
+              <About />
             </Box>
-          </div>
-        </Modal>
+          </Modal>
 
-        {/* Modal 4 */}
-        <Modal open={activeModal === 4} onClose={closeModal}>
-          <Box sx={modalStyle}>
-            <IconButton
-              onClick={closeModal}
-              color="primary"
-              sx={{
-                position: "absolute",
-                right: 8,
-                top: 8,
-              }}
-            >
-              <FaTimes size={18} />
-            </IconButton>
-            <Typography variant="h6" color="primary">
-              CONTACT
-            </Typography>
-            <ContactForm />
-          </Box>
-        </Modal>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </div>
+          {/* Modal 2 */}
+          <Modal open={activeModal === 2} onClose={closeModal}>
+            <Box sx={modalStyle}>
+              <IconButton
+                onClick={closeModal}
+                color="primary"
+                sx={{
+                  position: "absolute",
+                  right: 8,
+                  top: 8,
+                }}
+              >
+                <FaTimes size={18} />
+              </IconButton>
+              <Typography sx={{ mb: 1 }} variant="h6" color="white">
+                FEBRUARY SPONSORS
+              </Typography>
+              <Typography sx={{ mb: 2 }} variant="body1" color="#6DB04B">
+                Click logo for sponsors website!
+              </Typography>
+              <Sponsors />
+            </Box>
+          </Modal>
+
+          {/* Modal 3 */}
+          <Modal open={activeModal === 3} onClose={closeModal}>
+            <div>
+              <Box sx={modalStyleCalendar} color="primary">
+                <IconButton
+                  onClick={closeModal}
+                  color="primary"
+                  sx={{
+                    position: "absolute",
+                    right: 8,
+                    top: 8,
+                  }}
+                >
+                  <FaTimes size={18} />
+                </IconButton>
+                <Typography sx={{ mb: 2 }} variant="body1" color="#6DB04B">
+                  Click event for more information!
+                </Typography>
+                <Box sx={{ flex: 1, minHeight: 0 }}>
+                  <CalendarWrapper />
+                </Box>
+              </Box>
+            </div>
+          </Modal>
+
+          {/* Modal 4 */}
+          <Modal open={activeModal === 4} onClose={closeModal}>
+            <Box sx={modalStyle}>
+              <IconButton
+                onClick={closeModal}
+                color="primary"
+                sx={{
+                  position: "absolute",
+                  right: 8,
+                  top: 8,
+                }}
+              >
+                <FaTimes size={18} />
+              </IconButton>
+              <Typography variant="h6" color="primary">
+                CONTACT
+              </Typography>
+              <ContactForm />
+            </Box>
+          </Modal>
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
+    </>
   );
 }
 
