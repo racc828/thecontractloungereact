@@ -141,7 +141,7 @@ function App() {
                 <FaTimes size={18} />
               </IconButton>
               <Typography sx={{ mb: 1 }} variant="h6" color="white">
-                FEBRUARY SPONSORS
+                APRIL SPONSORS
               </Typography>
               <Typography sx={{ mb: 2 }} variant="body1" color="#6DB04B">
                 Click logo for sponsors website!
